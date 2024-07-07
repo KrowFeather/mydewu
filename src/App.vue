@@ -47,7 +47,7 @@ const changeToUserPage = ()=>{
 .main-content{
   margin-bottom: 3.5em;
   z-index:1;
-  background-color: #EEE;
+  background: linear-gradient(to top,#eee,#eee,white);
 }
 .footer{
   position: fixed;
@@ -55,10 +55,11 @@ const changeToUserPage = ()=>{
   left: 0;
   height: 3.5em;
   width: 100%;
-  border-top: 1px solid #666;
+  border-top: 1px solid #51515151 ;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: white;
   z-index:1000;
 }
 .footer .menu-item{
