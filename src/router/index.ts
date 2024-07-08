@@ -3,7 +3,9 @@ import ExplorePage from '@/pages/ExplorePage.vue'
 import HomePage from '@/pages/HomePage.vue'
 import PurchasePage from '@/pages/PurchasePage.vue'
 import UserPage from '@/pages/UserPage.vue'
-
+import RecommendGoods from '@/pages/GoodsInfos/RecommendGoods.vue'
+import ShoeCate from '@/pages/GoodsInfos/ShoeCate.vue'
+import ClothesCate from '@/pages/GoodsInfos/ClothesCate.vue'
 const router = createRouter({
     history:createWebHashHistory(),
     routes:[
@@ -24,7 +26,24 @@ const router = createRouter({
         {
             name:'purchase',
             path:'/PurchasePage',
-            component:PurchasePage
+            component:PurchasePage,
+            children:[
+                {
+                    name:'recommendgoods',
+                    path:'RecommendGoods',
+                    component:RecommendGoods
+                },
+                {
+                    name:'shoecate',
+                    path:'ShoeCate',
+                    component:ShoeCate
+                },
+                {
+                    name:'clothescate',
+                    path:'ClothesCate',
+                    component:ClothesCate
+                },
+            ]
         },
         {
             name:'user',

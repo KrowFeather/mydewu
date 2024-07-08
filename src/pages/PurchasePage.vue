@@ -29,13 +29,16 @@
             </div>
         </header>
         <div class="main-content">
-
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue';
 import SearchComp from '../components/SearchComp.vue'
+import { useRouter } from 'vue-router';
+let router = useRouter()
 let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包袋', '配饰']
 document.onscroll = function () {
     let s1 = document.documentElement.scrollTop;
@@ -51,12 +54,32 @@ document.onscroll = function () {
         bottom.style.position = 'static';
     }
 }
+onMounted(()=>{
+    router.push({
+        name:'recommendgoods'
+    })
+})
 const changeToCorrespCategory = (ind: number) => {
     switch (ind) {
+        case 0:
+            router.push({
+                name:'recommendgoods'
+            })
+            break
         case 1:
+            router.push({
+                name:'shoecate'
+            })
+            break
         case 2:
-        case 3:
+            router.push({
+                name:'clothescate'
+            })
+            break
         case 4:
+            break
+        default:
+            break
     }
 }
 </script>

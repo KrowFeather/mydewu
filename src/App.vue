@@ -47,7 +47,7 @@ const changeToUserPage = ()=>{
 .main-content{
   margin-bottom: 3.5em;
   z-index:1;
-  background: linear-gradient(to top,#eee,#eee,white);
+  background: linear-gradient(to top,#f4f3f8,#f4f3f8,#f4f3f8,#f4f3f8,white);
 }
 .footer{
   position: fixed;
