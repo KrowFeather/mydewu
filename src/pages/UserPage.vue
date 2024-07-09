@@ -77,15 +77,64 @@
             </div>
         </div>
         <TraceComp wantcnt=0 havecnt=0 fscnt=0 subcnt=0 />
-        <div class="bookings"></div>
-        <div class="wallet"></div>
+        <div class="bookings">
+            <div class="bookings-top">
+                <h5>订单</h5>
+                <div class="bookingscnt">
+                    <p style="width: 1em;">0</p>
+                    <div class="rarr">
+                        <img src="../assets/icons/right-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bookings-bottom">
+                <div class="booking-item" v-for="(item, i) in bookingitem" :key="i">
+                    <img :src="item.ico" alt="nopic">
+                    <p>{{ item.name }}</p>
+                </div>
+            </div>
+        </div>
+        <WalletComp></WalletComp>
         <div class="request"></div>
         <div class="lowestb"></div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import WalletComp from '../components/userpage/WalletComp.vue'
 import TraceComp from '../components/userpage/TraceComp.vue'
+import ico1 from '../assets/icons/user/daifukuan.svg'
+import ico2 from '../assets/icons/user/daifahuo.svg'
+import ico3 from '../assets/icons/user/daishouhuo.svg'
+import ico4 from '../assets/icons/user/qiugou.svg'
+import ico5 from '../assets/icons/user/tuikuan.svg'
+import ico6 from '../assets/icons/user/comment.svg'
+let bookingitem = [
+    {
+        name: '待付款',
+        ico: ico1
+    },
+    {
+        name: '待发货',
+        ico: ico2
+    },
+    {
+        name: '待收货',
+        ico: ico3
+    },
+    {
+        name: '评价',
+        ico: ico6
+    },
+    {
+        name: '退款/售后',
+        ico: ico5
+    },
+    {
+        name: '求购',
+        ico: ico4
+    },
+]
 </script>
 
 <style scoped>
@@ -236,5 +285,49 @@ import TraceComp from '../components/userpage/TraceComp.vue'
     background: linear-gradient(to top, #e9d3c7, white);
     background-clip: text;
     color: transparent;
+}
+
+.bookings-top{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1em;
+}
+
+.bookings-bottom {
+    overflow-x: scroll;
+    display: -webkit-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bookings-bottom::-webkit-scrollbar{
+    display: none
+}
+
+.booking-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    margin-bottom:1em;
+}
+
+.booking-item p {
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+}
+
+.bookings {
+    margin: 1em 1em;
+    background-color: white;
+    border-radius: 3px;
+    width: 90%;
+}
+
+.bookingscnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

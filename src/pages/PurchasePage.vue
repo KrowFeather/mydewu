@@ -40,20 +40,20 @@ import SearchComp from '../components/SearchComp.vue'
 import { useRouter } from 'vue-router';
 let router = useRouter()
 let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包袋', '配饰']
-document.onscroll = function () {
-    let s1 = document.documentElement.scrollTop;
-    let s2 = document.body.scrollTop;
-    let scroll = s1 == 0 ? s2 : s1;
-    let width = document.documentElement.clientWidth;
-    let bottom: any = document.getElementById('bottom');
-    if (scroll > width * 0.12) {
-        bottom.style.position = 'fixed';
-        bottom.style.top = '0';
-        bottom.style.left = '0';
-    } else {
-        bottom.style.position = 'static';
-    }
-}
+// document.onscroll = function () {
+//     let s1 = document.documentElement.scrollTop;
+//     let s2 = document.body.scrollTop;
+//     let scroll = s1 == 0 ? s2 : s1;
+//     let width = document.documentElement.clientWidth;
+//     let bottom: any = document.getElementById('bottom');
+//     if (scroll > width * 0.12) {
+//         bottom.style.position = 'fixed';
+//         bottom.style.top = '0';
+//         bottom.style.left = '0';
+//     } else {
+//         bottom.style.position = 'static';
+//     }
+// }
 onMounted(()=>{
     router.push({
         name:'recommendgoods'

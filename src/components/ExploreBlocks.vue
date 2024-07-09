@@ -6,7 +6,7 @@
                 <div class="content-left">
                     <h5 style="font-size: 0.9em; margin: 0; margin-bottom: 0.4em;">{{ title }}</h5>
                     <div class="cl-bottom">
-                        <h4 class="btext">{{ btext }}</h4>
+                        <h4 class="btext" v-if="btext!=undefined">{{ btext }}</h4>
                         <p style="font-size: 0.8em; color:#666; margin: 0;">{{ text }}</p>
                     </div>
                 </div>
@@ -47,7 +47,6 @@ defineProps(['title', 'text', 'btext'])
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    border-bottom: 1px solid #eee;
     height: 4.8em;
     width: 100%;
 }
@@ -55,13 +54,14 @@ defineProps(['title', 'text', 'btext'])
 .cl-bottom {
     display: flex;
     align-items: center;
-    width: 16em;
+    width: 14em;
 }
 
 .cl-bottom p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .btext {
@@ -69,5 +69,11 @@ defineProps(['title', 'text', 'btext'])
     color: #666;
     margin: 0;
     border-right: 1px solid #666;
+    box-sizing: border-box;
+    padding-right: 0.5em;
+}
+
+.rarr{
+    width: 2em;
 }
 </style>

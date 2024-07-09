@@ -79,6 +79,7 @@ defineProps(['wantcnt', 'havecnt', 'fscnt', 'subcnt'])
     height: 6em;
     box-sizing: border-box;
     padding: 0 1em;
+    border-radius: 3px;
 }
 
 .want,
@@ -89,6 +90,7 @@ defineProps(['wantcnt', 'havecnt', 'fscnt', 'subcnt'])
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .want{    

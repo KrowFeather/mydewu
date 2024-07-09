@@ -45,7 +45,7 @@ const changeToUserPage = ()=>{
 }
 
 .main-content{
-  margin-bottom: 3.5em;
+  margin-bottom: 3em;
   z-index:1;
   background: linear-gradient(to top,#f4f3f8,#f4f3f8,#f4f3f8,#f4f3f8,white);
 }

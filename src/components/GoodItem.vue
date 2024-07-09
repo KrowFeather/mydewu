@@ -1,14 +1,15 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper-item">
         <div class="item-top">
-            <img :src="pic" alt="nopic">
+            <img :src="pic" alt="nopic" style="height: 100%; width: 100%;">
         </div>
         <div class="item-bottom">
+            <div class="info" style="height: 2em;">{{  info }}</div>
             <div class="item-desc">
                 {{ desc }}
             </div>
             <div class="item-bottom-bottom">
-                <div class="item-price">{{ price }}</div>
+                <div class="item-price"><span style="font-size: 0.85em;">￥</span>{{ price }}</div>
                 <div class="item-statistics" style="color: #666;">{{ stat }}人付款</div>
             </div>
         </div>
@@ -16,28 +17,46 @@
 </template>
 
 <script lang="ts" setup>
-defineProps(['pic','desc','price','stat'])
+defineProps(['pic','desc','price','stat','info'])
 </script>
 
 <style scoped>
-.wrapper{
+.wrapper-item{
     display: flex;
+    flex-direction: column;
     width: 50%;
     flex-basis: 2;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 10em;
+    justify-content: center;
+    background-color: white;
 }
 .item-desc{
     font-size: 0.85em;
     box-sizing: border-box;
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 .item-bottom{
     padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
 }
 .item-bottom-bottom{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 0.75em;
+    margin-top: 0.3em;
+}
+.item-price{
+    font-size: 1.2em;
+}
+.item-top{
+    height: 10em; 
+}
+.info{
+    font-size: 0.5em;
+    color: #666;
+    margin-bottom: 0.3em;
 }
 </style>

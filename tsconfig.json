@@ -1,4 +1,9 @@
 {
+  "compilerOptions": {
+    "types": [
+      "node" //新增
+    ]
+  },
   "files": [],
   "references": [
     {
@@ -7,5 +12,6 @@
     {
       "path": "./tsconfig.app.json"
     }
-  ]
+  ],
+  "typeRoots": [ "../node_modules/@types","./type"]
 }
