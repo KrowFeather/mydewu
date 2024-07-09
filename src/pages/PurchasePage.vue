@@ -22,7 +22,6 @@
                     <SearchComp />
                 </div>
                 <div class="next-tabs">
-                    <!-- <div class="tab-item"></div> -->
                     <div class="tab-item" v-for="(item, i) in category" :key="item" @click="changeToCorrespCategory(i)">
                         {{ item }}</div>
                 </div>
@@ -55,9 +54,9 @@ let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包
 //     }
 // }
 onMounted(()=>{
-    router.push({
-        name:'recommendgoods'
-    })
+    // router.push({
+    //     name:'recommendgoods'
+    // })
 })
 const changeToCorrespCategory = (ind: number) => {
     switch (ind) {

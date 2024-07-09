@@ -15,11 +15,17 @@
                 </div>
             </div>
             <div class="header-mid-right">
-                <div class="username" style="font-size: 1.1em">
-                    鸦羽
+                <div class="username" style="font-size: 1.1em; margin-bottom: 0.3em">
+                    <span v-if="accountStore.isLogined == 0" @click="changeToLoginPage">登录/注册</span>
+                    <span v-else>
+                        {{ userinfo.name }}
+                    </span>
                 </div>
                 <div class="user-sig" style="font-size: 0.9em; color: #666;">
-                    未设置签名
+                    <span v-if="accountStore.isLogined == 0">注册最高享<span style="color: orangered;">￥520</span>新人礼</span>
+                    <span v-else>
+                        {{ userinfo.sig }}
+                    </span>
                 </div>
             </div>
         </div>
@@ -44,7 +50,9 @@
             </div>
         </div>
         <div class="creator-center">
-            <div class="cc-left"></div>
+            <div class="cc-left">
+                <img src="../assets/icons/user/czzx.png" alt="" style="width: 3.5em;">
+            </div>
             <div class="cc-right">
                 <div class="cc-ritem">
                     <img src="../assets/icons/data.svg" alt="">
@@ -94,14 +102,18 @@
                 </div>
             </div>
         </div>
-        <WalletComp></WalletComp>
+        <!-- <WalletComp></WalletComp> -->
         <div class="request"></div>
         <div class="lowestb"></div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import WalletComp from '../components/userpage/WalletComp.vue'
+import { useAccountStore } from '@/store/account'
+import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import axios from 'axios'
+// import WalletComp from '../components/userpage/WalletComp.vue'
 import TraceComp from '../components/userpage/TraceComp.vue'
 import ico1 from '../assets/icons/user/daifukuan.svg'
 import ico2 from '../assets/icons/user/daifahuo.svg'
@@ -109,6 +121,8 @@ import ico3 from '../assets/icons/user/daishouhuo.svg'
 import ico4 from '../assets/icons/user/qiugou.svg'
 import ico5 from '../assets/icons/user/tuikuan.svg'
 import ico6 from '../assets/icons/user/comment.svg'
+const accountStore = useAccountStore()
+let router = useRouter()
 let bookingitem = [
     {
         name: '待付款',
@@ -135,6 +149,23 @@ let bookingitem = [
         ico: ico4
     },
 ]
+let userinfo = ref({} as any)
+onMounted(() => {
+    getUserInfo()
+})
+const getUserInfo = async () => {
+    await axios.get(accountStore.host + '/getUserInfo/' + accountStore.userid).then((resp) => {
+        userinfo.value = resp.data
+        userinfo.value = userinfo.value[0]
+        console.log(userinfo.value)
+    })
+}
+const changeToLoginPage = ()=>{
+    accountStore.fhide=true
+    router.push({
+        name:'login'
+    })
+}
 </script>
 
 <style scoped>
@@ -287,7 +318,7 @@ let bookingitem = [
     color: transparent;
 }
 
-.bookings-top{
+.bookings-top {
     display: flex;
     justify-content: space-between;
     margin-left: 1em;
@@ -299,7 +330,7 @@ let bookingitem = [
     -webkit-overflow-scrolling: touch;
 }
 
-.bookings-bottom::-webkit-scrollbar{
+.bookings-bottom::-webkit-scrollbar {
     display: none
 }
 
@@ -309,7 +340,7 @@ let bookingitem = [
     justify-content: center;
     align-items: center;
     width: 4em;
-    margin-bottom:1em;
+    margin-bottom: 1em;
 }
 
 .booking-item p {
@@ -325,7 +356,7 @@ let bookingitem = [
     width: 90%;
 }
 
-.bookingscnt{
+.bookingscnt {
     display: flex;
     justify-content: center;
     align-items: center;

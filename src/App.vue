@@ -3,7 +3,7 @@
     <div class="main-content">
       <router-view></router-view>
     </div>
-    <div class="footer">
+    <div class="footer" v-if="!accountStore.fhide">
       <div class="menu-item" @click="changeToHomePage">得物</div>
       <div class="menu-item" @click="changeToPurchasePage">购买</div>
       <div class="menu-item" @click="changeToExplorePage">探索</div>
@@ -14,7 +14,9 @@
 
 <script lang="ts" setup>
 import { useRouter } from 'vue-router';
+import { useAccountStore } from './store/account';
 let router = useRouter()
+let accountStore = useAccountStore()
 const changeToHomePage = ()=>{
   router.push({
     name:'home'
