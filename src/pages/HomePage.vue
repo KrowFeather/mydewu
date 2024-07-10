@@ -17,11 +17,11 @@ import NavTab from '@/components/NavTab.vue'
 import FootBar from '@/components/FootBar.vue';
 let tabname = ['关注','灵感','推荐','视频','直播','潮鞋','穿搭','汽车','手表']
 let link = [
-    '',
+    'friendzone',
     'inspiration',
     'recommend',
     '',
-    '',
+    'live',
     '',
     '',
     '',

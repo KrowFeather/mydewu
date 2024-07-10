@@ -38,6 +38,7 @@ const changeToDetail = (id:number)=>{
     flex-basis: 2;
     justify-content: center;
     background-color: white;
+    padding: 0;
 }
 .item-desc{
     font-size: 0.85em;

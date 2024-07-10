@@ -10,10 +10,10 @@
             </div>
         </div>
         <div class="bookings-bottom">
-            <div class="booking-item" v-for="(item, i) in bookingitem" :key="i">
+            <!-- <div class="booking-item" v-for="(item, i) in bookingitem" :key="i">
                 <img :src="item.ico" alt="nopic">
                 <p>{{ item.name }}</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

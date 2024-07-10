@@ -6,9 +6,11 @@
             </div>
             <div class="right">
                 <div style="width: 100%;">
-                    想要
+                    <h4 style="margin: 0;">
+                        想要
+                    </h4>
                 </div>
-                <div style="width: 2em; text-align: center">
+                <div style="width: 2em; text-align: center; font-size:0.8em; color: #666;">
                     {{ wantcnt }}
                 </div>
                 <div class="rarr">
@@ -22,9 +24,11 @@
             </div>
             <div class="right">
                 <div style="width: 100%;">
-                    我有
+                    <h4 style="margin: 0;">
+                        我有
+                    </h4>
                 </div>
-                <div style="width: 2em; text-align: center">
+                <div style="width: 2em; text-align: center;font-size:0.8em; color: #666;">
                     {{ havecnt }}
                 </div>
                 <div class="rarr">
@@ -38,9 +42,11 @@
             </div>
             <div class="right">
                 <div style="width: 100%;">
-                    足迹
+                    <h4 style="margin: 0;">
+                        足迹
+                    </h4>
                 </div>
-                <div style="width: 2em; text-align: center">
+                <div style="width: 2em; text-align: center; font-size:0.8em;  color: #666;">
                     {{ fscnt }}
                 </div>
                 <div class="rarr">
@@ -54,9 +60,11 @@
             </div>
             <div class="right">
                 <div style="width: 100%;">
-                    订阅
+                    <h4 style="margin: 0;">
+                        订阅
+                    </h4>
                 </div>
-                <div style="width: 2em; text-align: center">
+                <div style="width: 2em; text-align: center; font-size:0.8em; color: #666;" >
                     {{ subcnt }}
                 </div>
                 <div class="rarr">

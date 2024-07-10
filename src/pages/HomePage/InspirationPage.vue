@@ -8,7 +8,8 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <TopicItem v-for="(item,i) in topicitems" :key="i" :title="item.title" :info="item.info" :subtitle="item.subtitle" :pics="item.pics" />
+        <TopicItem v-for="(item,i) in topicitems" :key="i" :title="item.title" :info="item.info" :subtitle="item.subtitle" :pics="item.pics" :emoji="item.emoji"/>
+        <div class="block" style="height: 3.5em;"></div>
     </div>
 </template>
 
@@ -28,7 +29,8 @@ let topicitems = [
             "https://t.tutu.to/img/mXnrq",
             "https://t.tutu.to/img/mXf26",
             "https://t.tutu.to/img/mXMBr"
-        ]
+        ],
+        emoji:'https://img.picui.cn/free/2024/07/11/668ec01c40af9.png'
     },
     {
         title:'我离不开这个App',
@@ -38,7 +40,8 @@ let topicitems = [
             "https://t.tutu.to/img/mX2ln",
             "https://t.tutu.to/img/mX6od",
             "https://t.tutu.to/img/mXFiH"
-        ]
+        ],
+        emoji:'https://img.picui.cn/free/2024/07/11/668ec01c40cb6.png'
     },
     {
         title:'夏天不能没有这双鞋',
@@ -48,8 +51,20 @@ let topicitems = [
             "https://t.tutu.to/img/mXOa7",
             "https://t.tutu.to/img/mXS2w",
             "https://t.tutu.to/img/mXVro"
-        ]
+        ],
+        emoji:'https://img.picui.cn/free/2024/07/11/668ec01c40bef.png'
     },
+    {
+        title:'夏日羽球嘉年华',
+        info:'瓜分万元奖池',
+        subtitle:'分享羽球内容，瓜分百万奖池',
+        pics:[
+            "https://img.picui.cn/free/2024/07/11/668ebe239d2cf.jpg",
+            "https://img.picui.cn/free/2024/07/11/668ebe23c773b.jpg",
+            "https://img.picui.cn/free/2024/07/11/668ebe2327811.jpg"
+        ],
+        emoji:'https://img.picui.cn/free/2024/07/11/668ec04d3dac2.png'
+    }
 ]
 onMounted(async() => {
     await getSwiper()

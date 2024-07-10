@@ -11,7 +11,8 @@
         <div class="header-mid">
             <div class="header-mid-left">
                 <div class="user-sprite">
-                    <img src="" alt="">
+                    <img src="../assets/icons/euerror.png" alt="" v-if="accountStore.isLogined==0" style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;">
+                    <img :src="userinfo.sprite" alt="" style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;" v-if="accountStore.isLogined==1">
                 </div>
             </div>
             <div class="header-mid-right">
@@ -30,28 +31,25 @@
             </div>
         </div>
         <div class="header-bottom">
-            <div class="lowerbar">
-                <div class="stat-item">
-                    <h4>0</h4>
-                    <p>获赞与收藏</p>
-                </div>
-                <div class="stat-item">
-                    <h4>0</h4>
-                    <p>粉丝</p>
-                </div>
-                <div class="stat-item">
-                    <h4>0</h4>
-                    <p>关注</p>
-                </div>
-                <div class="stat-item">
-                    <h4>0</h4>
-                    <p>动态</p>
-                </div>
-            </div>
+            <LowerBar v-if="accountStore.isLogined == 0" />
+            <LowerBar v-else>
+                <template v-slot:s1>
+                    {{ userinfo.likes }}
+                </template>
+                <template v-slot:s2>
+                    {{ userinfo.fans }}
+                </template>
+                <template v-slot:s3>
+                    {{ userinfo.subscribe }}
+                </template>
+                <template v-slot:s4>
+                    <!-- {{ userinfo.dongtai }} -->
+                </template>
+            </LowerBar>
         </div>
         <div class="creator-center">
             <div class="cc-left">
-                <img src="../assets/icons/user/czzx.png" alt="" style="width: 3.5em;">
+                <img src="../assets/icons/user/czzx.png" alt="" style="width: 3.5em; background-clip: border-box;">
             </div>
             <div class="cc-right">
                 <div class="cc-ritem">
@@ -74,7 +72,11 @@
         </div>
         <div class="ad">
             <div class="ad-l">
-                心省Pro|为你省钱又省心
+                <img src="https://img.picui.cn/free/2024/07/11/668ed10512917.png" alt="" style="height:1.8em;">
+                <div class="separator">&nbsp;</div>
+                <span>
+                    为你省钱又省心
+                </span>
             </div>
             <div class="ad-r">
                 <div class="ad-in">
@@ -106,7 +108,7 @@
         <div class="request"></div>
         <div class="lowestb"></div>
     </div>
-    <FootBar/>
+    <FootBar />
 </template>
 
 <script lang="ts" setup>
@@ -114,6 +116,7 @@ import { useAccountStore } from '@/store/account'
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import FootBar from '@/components/FootBar.vue'
+import LowerBar from '@/components/userpage/LowerBar.vue'
 import axios from 'axios'
 // import WalletComp from '../components/userpage/WalletComp.vue'
 import TraceComp from '../components/userpage/TraceComp.vue'
@@ -153,7 +156,9 @@ let bookingitem = [
 ]
 let userinfo = ref({} as any)
 onMounted(() => {
-    getUserInfo()
+    if (accountStore.isLogined == 1) {
+        getUserInfo()
+    }
 })
 const getUserInfo = async () => {
     await axios.get(accountStore.host + '/getUserInfo/' + accountStore.userid).then((resp) => {
@@ -162,9 +167,9 @@ const getUserInfo = async () => {
         console.log(userinfo.value)
     })
 }
-const changeToLoginPage = ()=>{
+const changeToLoginPage = () => {
     router.push({
-        name:'login'
+        name: 'login'
     })
 }
 </script>
@@ -195,10 +200,9 @@ const changeToLoginPage = ()=>{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
     width: 4em;
     height: 4em;
-    border-radius: 10em;
+    /* border-radius: 10em; */
     margin: 0 1em;
 }
 
@@ -210,34 +214,6 @@ const changeToLoginPage = ()=>{
 
 .header-mid-left {
     display: flex;
-    align-items: center;
-}
-
-.lowerbar {
-    display: flex;
-    height: 2em;
-    justify-content: space-around;
-}
-
-.stat-item {
-    width: 25%;
-}
-
-.stat-item h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.stat-item p {
-    margin: 0;
-    font-size: 0.7em;
-    color: #666;
-}
-
-.lowerbar .stat-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -278,7 +254,7 @@ const changeToLoginPage = ()=>{
 
 .ad {
     height: 2.5em;
-    background-color: #f3e9d8;
+    background-color: #fef7f1;
     margin: 1em;
     margin-top: 1em;
     border-radius: 2px;
@@ -289,6 +265,14 @@ const changeToLoginPage = ()=>{
 
 .ad-l {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.ad-l span {
+    font-size: 0.9em;
+    color: #333;
 }
 
 .ad-r {
@@ -361,5 +345,15 @@ const changeToLoginPage = ()=>{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.separator {
+    width: 0.1em;
+    height: 1em;
+    background-color: #cabeba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.3em;
 }
 </style>
