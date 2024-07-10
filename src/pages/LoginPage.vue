@@ -51,7 +51,6 @@ import { useRouter } from 'vue-router';
 let router = useRouter()
 let accountStore = useAccountStore()
 const goback = ()=>{
-    accountStore.fhide = false;
     router.push({
         name:'user'
     })
@@ -59,7 +58,6 @@ const goback = ()=>{
 
 const login = ()=>{
     accountStore.isLogined=1
-    accountStore.fhide = false;
     router.push({
         name:'user'
     })

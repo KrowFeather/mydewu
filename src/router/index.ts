@@ -3,12 +3,13 @@ import ExplorePage from '@/pages/ExplorePage.vue'
 import HomePage from '@/pages/HomePage.vue'
 import PurchasePage from '@/pages/PurchasePage.vue'
 import UserPage from '@/pages/UserPage.vue'
-import RecommendGoods from '@/pages/GoodsInfos/RecommendGoods.vue'
-import ShoeCate from '@/pages/GoodsInfos/ShoeCate.vue'
-import ClothesCate from '@/pages/GoodsInfos/ClothesCate.vue'
+import RecommendGoods from '@/pages/PurchasePage/RecommendGoods.vue'
+import ShoeCate from '@/pages/PurchasePage/ShoeCate.vue'
+import ClothesCate from '@/pages/PurchasePage/ClothesCate.vue'
 import LoginPage from "@/pages/LoginPage.vue"
 import RecommendPage from "@/pages/HomePage/RecommendPage.vue"
 import InspirationPage from "@/pages/HomePage/InspirationPage.vue"
+import MerchandiseInfo from "@/pages/MerchandiseInfo.vue"
 const router = createRouter({
     history:createWebHashHistory(),
     routes:[
@@ -71,6 +72,11 @@ const router = createRouter({
             name:'login',
             path:'/LoginPage',
             component:LoginPage
+        },
+        {
+            name:'merchandise',
+            path:'/MerchandiseInfo',
+            component:MerchandiseInfo
         }
     ]
 })

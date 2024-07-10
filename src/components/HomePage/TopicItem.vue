@@ -22,6 +22,7 @@
 
 <script lang="ts" setup>
 defineProps(['title','info','subtitle','pics'])
+
 </script>
 
 <style scoped>

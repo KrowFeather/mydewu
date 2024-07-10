@@ -24,10 +24,12 @@
             <img src="../assets/icons/explore/expl4.png" alt="" style="height: 2.5em;">
         </ExploreBlocks>
     </div>
+    <FootBar/>
 </template>
 
 <script lang="ts" setup>
-import ExploreBlocks from '../components/ExploreBlocks.vue';
+import ExploreBlocks from '@/components/ExplorePage/ExploreBlocks.vue';
+import FootBar from '@/components/FootBar.vue';
 </script>
 <style scoped>
 .explore-title img{

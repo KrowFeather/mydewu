@@ -106,12 +106,14 @@
         <div class="request"></div>
         <div class="lowestb"></div>
     </div>
+    <FootBar/>
 </template>
 
 <script lang="ts" setup>
 import { useAccountStore } from '@/store/account'
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import FootBar from '@/components/FootBar.vue'
 import axios from 'axios'
 // import WalletComp from '../components/userpage/WalletComp.vue'
 import TraceComp from '../components/userpage/TraceComp.vue'
@@ -161,7 +163,6 @@ const getUserInfo = async () => {
     })
 }
 const changeToLoginPage = ()=>{
-    accountStore.fhide=true
     router.push({
         name:'login'
     })

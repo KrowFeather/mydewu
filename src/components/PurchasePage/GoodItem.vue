@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper-item">
+    <div class="wrapper-item" @click="changeToDetail(id)">
         <div class="item-top">
             <img :src="pic" alt="nopic" style="height: 100%; width: 100%;">
         </div>
@@ -17,7 +17,17 @@
 </template>
 
 <script lang="ts" setup>
-defineProps(['pic','desc','price','stat','info'])
+defineProps(['pic','desc','price','stat','info','id'])
+import { useRouter } from 'vue-router';
+let router = useRouter()
+const changeToDetail = (id:number)=>{
+    router.push({
+        name:'merchandise',
+        query:{
+            id:id
+        }
+    })
+}
 </script>
 
 <style scoped>

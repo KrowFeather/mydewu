@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts" setup>
-import GoodItem from '../../components/GoodItem.vue'
 import axios from 'axios'
 import { useAccountStore } from '../../store/account';
 import { onMounted,ref } from 'vue';
+import GoodItem from '@/components/PurchasePage/GoodItem.vue';
 const accountStore = useAccountStore()
 let allInfo:any = ref()
 const getAllInfo = async()=>{

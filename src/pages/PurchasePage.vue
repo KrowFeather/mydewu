@@ -31,11 +31,13 @@
             <router-view></router-view>
         </div>
     </div>
+    <FootBar/>
 </template>
 
 <script lang="ts" setup>
 import SearchComp from '../components/SearchComp.vue'
 import { useRouter } from 'vue-router';
+import FootBar from '@/components/FootBar.vue';
 let router = useRouter()
 let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包袋', '配饰']
 // document.onscroll = function () {
