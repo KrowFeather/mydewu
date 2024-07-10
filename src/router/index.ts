@@ -7,6 +7,8 @@ import RecommendGoods from '@/pages/GoodsInfos/RecommendGoods.vue'
 import ShoeCate from '@/pages/GoodsInfos/ShoeCate.vue'
 import ClothesCate from '@/pages/GoodsInfos/ClothesCate.vue'
 import LoginPage from "@/pages/LoginPage.vue"
+import RecommendPage from "@/pages/HomePage/RecommendPage.vue"
+import InspirationPage from "@/pages/HomePage/InspirationPage.vue"
 const router = createRouter({
     history:createWebHashHistory(),
     routes:[
@@ -22,7 +24,20 @@ const router = createRouter({
         {
             name:'home',
             path:'/HomePage',
-            component:HomePage
+            component:HomePage,
+            redirect:'/HomePage/RecommendPage',
+            children:[
+                {
+                    name:'recommend',
+                    path:'RecommendPage',
+                    component:RecommendPage,
+                },
+                {
+                    name:'inspiration',
+                    path:'InspirationPage',
+                    component:InspirationPage,
+                }
+            ]
         },
         {
             name:'purchase',

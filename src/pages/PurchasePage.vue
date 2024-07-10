@@ -34,7 +34,6 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue';
 import SearchComp from '../components/SearchComp.vue'
 import { useRouter } from 'vue-router';
 let router = useRouter()
@@ -53,11 +52,6 @@ let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包
 //         bottom.style.position = 'static';
 //     }
 // }
-onMounted(()=>{
-    // router.push({
-    //     name:'recommendgoods'
-    // })
-})
 const changeToCorrespCategory = (ind: number) => {
     switch (ind) {
         case 0:
