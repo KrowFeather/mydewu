@@ -21,8 +21,14 @@
         </div>
         <div class="mid-toolbar"></div>
         <div class="description">
-            <div class="title"></div>
-            <div class="top"></div>
+            <div class="title">
+                <h4>
+                    {{ title }}
+                </h4>
+            </div>
+            <div class="topic">
+                {{ topic }}
+            </div>
         </div>
         <div class="relativeGoods"></div>
         <div class="my-panel">
@@ -34,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-
+defineProps(['usersprite','username','time','title','topic'])
 </script>
 
 <style scoped>
