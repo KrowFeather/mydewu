@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "159943",
+      "name": "back",
+      "font_class": "fenxiang",
+      "unicode": "f016f",
+      "unicode_decimal": 983407
+    },
+    {
       "icon_id": "974125",
       "name": "star",
       "font_class": "star",
@@ -20,6 +27,13 @@
       "unicode_decimal": 58937
     },
     {
+      "icon_id": "1567467",
+      "name": "circle_ok",
+      "font_class": "circle_ok",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
       "icon_id": "4114102",
       "name": "like",
       "font_class": "like",
@@ -27,11 +41,18 @@
       "unicode_decimal": 59037
     },
     {
+      "icon_id": "4114104",
+      "name": "more",
+      "font_class": "more",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
       "icon_id": "5589055",
       "name": "share",
       "font_class": "share",
-      "unicode": "e638",
-      "unicode_decimal": 58936
+      "unicode": "e63a",
+      "unicode_decimal": 58938
     },
     {
       "icon_id": "5747646",
@@ -41,11 +62,32 @@
       "unicode_decimal": 59176
     },
     {
+      "icon_id": "8430216",
+      "name": "wechat",
+      "font_class": "wechat-",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
       "icon_id": "10168254",
       "name": "edit-write",
       "font_class": "edit-write",
       "unicode": "e62f",
       "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "10487482",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "39492448",
+      "name": "forward",
+      "font_class": "forward",
+      "unicode": "e657",
+      "unicode_decimal": 58967
     }
   ]
 }

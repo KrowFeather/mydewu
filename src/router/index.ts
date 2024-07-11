@@ -10,7 +10,6 @@ import LoginPage from "@/pages/LoginPage.vue"
 import RecommendPage from "@/pages/HomePage/RecommendPage.vue"
 import InspirationPage from "@/pages/HomePage/InspirationPage.vue"
 import MerchandiseInfo from "@/pages/MerchandiseInfo.vue"
-import LivePage from "@/pages/HomePage/LivePage.vue"
 import FriendZone from "@/pages/HomePage/FriendZone.vue"
 const router = createRouter({
     history:createWebHashHistory(),
@@ -39,11 +38,6 @@ const router = createRouter({
                     name:'inspiration',
                     path:'InspirationPage',
                     component:InspirationPage,
-                },
-                {
-                    name:'live',
-                    path:'LivePage',
-                    component:LivePage,
                 },
                 {
                     name:'friendzone',

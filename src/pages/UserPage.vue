@@ -43,7 +43,6 @@
                     {{ userinfo.subscribe }}
                 </template>
                 <template v-slot:s4>
-                    <!-- {{ userinfo.dongtai }} -->
                 </template>
             </LowerBar>
         </div>
@@ -104,9 +103,30 @@
                 </div>
             </div>
         </div>
-        <!-- <WalletComp></WalletComp> -->
-        <div class="request"></div>
-        <div class="lowestb"></div>
+        <WalletComp yhq="1" jq="￥20万" fq="￥5万" jt="￥0" lpk="￥0">
+        </WalletComp>
+        <br>
+        <div class="request">
+            <div class="request-item">
+                <div class="request-l-l">
+                    <h4>申请成为个人卖家</h4>
+                    <p>出售闲置 快速回血</p>
+                </div>
+                <div class="request-l-r">
+                    <i class="iconfont icon-forward"></i>
+                </div>
+            </div>
+            <div class="request-item">
+                <div class="request-l-l">
+                    <h4>企业/品牌商家入驻</h4>
+                    <p>诚邀优质商家</p>
+                </div>
+                <div class="request-l-r">
+                    <i class="iconfont icon-forward"></i>
+                </div>
+            </div>
+        </div>
+        <div class="blocker" style="height: 4em;"></div>
     </div>
     <FootBar />
 </template>
@@ -118,7 +138,7 @@ import { useRouter } from 'vue-router'
 import FootBar from '@/components/FootBar.vue'
 import LowerBar from '@/components/userpage/LowerBar.vue'
 import axios from 'axios'
-// import WalletComp from '../components/userpage/WalletComp.vue'
+import WalletComp from '../components/userpage/WalletComp.vue'
 import TraceComp from '../components/userpage/TraceComp.vue'
 import ico1 from '../assets/icons/user/daifukuan.svg'
 import ico2 from '../assets/icons/user/daifahuo.svg'
@@ -356,5 +376,35 @@ const changeToLoginPage = () => {
     justify-content: center;
     align-items: center;
     margin: 0 0.3em;
+}
+
+.request{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1em;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.request-item{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em 1em;
+    background-color: white;
+    height: 100%;
+}
+
+.request-item h4{
+    font-size: 0.6em
+}
+
+.request-item p{
+    color: #666;
+    font-size: 0.5em;
 }
 </style>

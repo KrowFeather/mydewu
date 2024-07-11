@@ -96,7 +96,7 @@
             </div>
         </div>
     </div>
-    <div class="blocker" style="height: 1em;"></div>
+    <div class="blocker" style="height: 0.5em;"></div>
 </template>
 
 <script lang="ts" setup>

@@ -129,4 +129,7 @@ defineProps(['wantcnt', 'havecnt', 'fscnt', 'subcnt'])
 .rarr{
     width: 1em;
 }
+h4{
+    font-size: 0.9em;
+}
 </style>

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1720678987881') format('truetype');
+  src: url('iconfont.ttf?t=1720696077524') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-fenxiang:before {
+  content: "\f016f";
+}
+
 .icon-star:before {
   content: "\e60f";
 }
@@ -19,19 +23,39 @@
   content: "\e639";
 }
 
+.icon-circle_ok:before {
+  content: "\e638";
+}
+
 .icon-like:before {
   content: "\e69d";
 }
 
+.icon-more:before {
+  content: "\e69e";
+}
+
 .icon-share:before {
-  content: "\e638";
+  content: "\e63a";
 }
 
 .icon-comment:before {
   content: "\e728";
 }
 
+.icon-wechat-:before {
+  content: "\e621";
+}
+
 .icon-edit-write:before {
   content: "\e62f";
+}
+
+.icon-kefu:before {
+  content: "\e692";
+}
+
+.icon-forward:before {
+  content: "\e657";
 }
 

@@ -2,9 +2,9 @@
     <div class="wrapper">
         <header>
             <SearchComp class="search"></SearchComp>
-            <NavTab :link="link" :category="tabname"></NavTab>
         </header>
         <div class="main-content">
+            <NavTab :link="link" :category="tabname"></NavTab>
             <router-view></router-view>
         </div>
     </div>  
@@ -21,7 +21,7 @@ let link = [
     'inspiration',
     'recommend',
     '',
-    'live',
+    '',
     '',
     '',
     '',
@@ -32,6 +32,7 @@ let link = [
 <style scoped>
 header{
     width: 100%;
+    height: 3em;
     position: fixed;
     top:0;
     left: 0;
@@ -45,6 +46,6 @@ header{
 }
 
 .main-content{
-    margin-top: 6em;
+    margin-top: 3em;
 }
 </style>
