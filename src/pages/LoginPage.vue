@@ -51,9 +51,7 @@ import { useRouter } from 'vue-router';
 let router = useRouter()
 let accountStore = useAccountStore()
 const goback = ()=>{
-    router.push({
-        name:'user'
-    })
+    router.back()
 }
 
 const login = ()=>{

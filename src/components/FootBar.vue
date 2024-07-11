@@ -24,18 +24,26 @@
 </template>
 
 <script lang="ts" setup>
+import { useAccountStore } from '@/store/account';
 import { useRouter } from 'vue-router';
 let router = useRouter()
 let m1 = 1
 let m2 = 0
 let m3 = 0
 let m4 = 0
+let accountStore = useAccountStore()
 const changeToHomePage = () => {
     m1 = 1
     m2 = m3 = m4 = 0;
-    router.push({
-        name: 'home'
-    })
+    if(accountStore.isLogined==0){
+        router.push({
+            name:'login'
+        })
+    }else{
+        router.push({
+            name: 'home'
+        })
+    }
 }
 const changeToPurchasePage = () => {
     m2 = 1

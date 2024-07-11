@@ -164,6 +164,7 @@ const getUserInfo = async () => {
     await axios.get(accountStore.host + '/getUserInfo/' + accountStore.userid).then((resp) => {
         userinfo.value = resp.data
         userinfo.value = userinfo.value[0]
+        accountStore.sprite=userinfo.value.sprite
         console.log(userinfo.value)
     })
 }

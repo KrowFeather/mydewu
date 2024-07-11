@@ -6,6 +6,7 @@ export const useAccountStore = defineStore('account',{
             isLogined:0,
             userid:1,
             host:'http://127.0.0.1:5000',
+            sprite:'',
         }
     }
 })
