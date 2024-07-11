@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="upper">
-            <CategoryList :data="data" />
+            <CategoryList :data="data"/>
             <div class="banner">
                 <img src="../../assets/icons/recG/banner.png" alt="" style="width: 100%;">
             </div>
@@ -69,6 +69,10 @@ onMounted(() => {
     width: 100%;
     box-sizing: border-box;
     padding: 0 1em;
+    background-color: white;
+}
+
+.upper{
     background-color: white;
 }
 .ad{

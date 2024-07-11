@@ -51,7 +51,7 @@ defineProps(['yhq','jq','fq','jt','lpk'])
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 6em;
+    /* height: 6em; */
     box-sizing: border-box;
     padding: 0 1em;
     border-radius: 3px;
@@ -76,6 +76,7 @@ defineProps(['yhq','jq','fq','jt','lpk'])
     justify-content:space-around;
     align-items: center;
     width: 100%;
+    padding-bottom: 1em;
 }
 
 .wallet-item{
@@ -94,5 +95,8 @@ defineProps(['yhq','jq','fq','jt','lpk'])
     background-color: white;
     box-sizing: border-box;
     padding: 0 1em
+}
+h4{
+    font-size: 0.9em;
 }
 </style>

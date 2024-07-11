@@ -5,7 +5,7 @@
                 <img :src="sprite" alt="" style="width: 80%;height: 80%; border-radius: 10em;">
             </div>
             <div class="close">
-                <img src="../../assets/icons/login/close.svg" alt="" style="scale: 0.6;">
+                <i class="iconfont icon-close" style="color: #666;"></i>
             </div>
             <div class="u-name">{{ name }}</div>
             <div class="u-desc">{{ desc }}</div>
@@ -43,7 +43,7 @@ defineProps(['sprite', 'name', 'desc'])
 .close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2px;
 }
 
 .bottom {

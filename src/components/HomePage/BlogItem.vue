@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="blog-stat">
-                    <img src="../../assets/icons/home/blog-like.svg" alt="">
+                    <i class="iconfont icon-like" style="color: #666;"></i>
                     <span style="font-size: 0.6em; color: #666;">{{ likes }}</span>
                 </div>
             </div>

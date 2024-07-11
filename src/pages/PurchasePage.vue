@@ -21,10 +21,7 @@
                 <div class="header-mid">
                     <SearchComp />
                 </div>
-                <div class="next-tabs">
-                    <div class="tab-item" v-for="(item, i) in category" :key="item" @click="changeToCorrespCategory(i)">
-                        {{ item }}</div>
-                </div>
+                <NavTab :link="link" :category="tabname" style="height: 2em;"></NavTab>
             </div>
         </header>
         <div class="main-content">
@@ -36,10 +33,20 @@
 
 <script lang="ts" setup>
 import SearchComp from '../components/SearchComp.vue'
-import { useRouter } from 'vue-router';
 import FootBar from '@/components/FootBar.vue';
-let router = useRouter()
-let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包袋', '配饰']
+import NavTab from '@/components/NavTab.vue';
+let tabname = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包袋', '配饰']
+let link = [
+    'recommendgoods',
+    'shoecate',
+    'clothescate',
+    '',
+    '',
+    '',
+    '',
+    '',
+    ''
+]
 // document.onscroll = function () {
 //     let s1 = document.documentElement.scrollTop;
 //     let s2 = document.body.scrollTop;
@@ -54,29 +61,6 @@ let category = ['推荐', '鞋类', '潮服', '数码', '艺术', '手表', '包
 //         bottom.style.position = 'static';
 //     }
 // }
-const changeToCorrespCategory = (ind: number) => {
-    switch (ind) {
-        case 0:
-            router.push({
-                name:'recommendgoods'
-            })
-            break
-        case 1:
-            router.push({
-                name:'shoecate'
-            })
-            break
-        case 2:
-            router.push({
-                name:'clothescate'
-            })
-            break
-        case 4:
-            break
-        default:
-            break
-    }
-}
 </script>
 
 <style scoped>
@@ -92,30 +76,6 @@ header {
     height: 3em;
     background-color: white;
     margin: 0 1em;
-}
-
-.next-tabs {
-    display: flex;
-    overflow-x: auto;
-    display: -webkit-box;
-    -webkit-overflow-scrolling: touch;
-    background-color: white;
-    height: 1.8em;
-    padding-bottom: 0.5em;
-    box-sizing: border-box;
-    border-bottom: 1px solid #1098ad;
-}
-
-.next-tabs::-webkit-scrollbar {
-    display: none;
-}
-
-.next-tabs .tab-item {
-    width: 4em;
-    font-size: 3.7vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .header-top-left {

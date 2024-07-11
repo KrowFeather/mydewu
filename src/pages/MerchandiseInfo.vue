@@ -21,9 +21,10 @@
                     </div>
                     <div class="info-header-right">
                         <div class="recentbuy-sprite">
-                            <img :src="'https://ui-avatars.com/api/?name='+rname[(other.rnamecnt+1)%rname.length]+'+'+rname[(other.rnamecnt+3)%rname.length]" alt="" style="width: 1.5em;height: 1.5em;border-radius: 10em ">
+                            <img :src="'https://ui-avatars.com/api/?name=' + rname[(other.rnamecnt + 1) % rname.length] + '+' + rname[(other.rnamecnt + 3) % rname.length]"
+                                alt="" style="width: 1.5em;height: 1.5em;border-radius: 10em ">
                         </div>
-                        <p style="color: #666;font-size:0.8em" >16小时前购买</p>
+                        <p style="color: #666;font-size:0.8em">16小时前购买</p>
                         <i class="iconfont icon-forward" style="color: #666"></i>
                     </div>
                 </div>
@@ -32,29 +33,46 @@
                     <div class="rating">
                         <i class="iconfont icon-star" v-for="i in 5" :key="i"></i>
                         <p style="color: #666;">
-                            {{  minfo.rating  }}
+                            {{ minfo.rating }}
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="info-adv">
+            <div class="banner">
 
+            </div>
+            <div class="service">
+                <p style="font-size: 0.8em; color: #666;">服务</p>
+                <span>正品保障险·7天无理由退货·晚到必赔</span>
+            </div>
+            <div class="param">
+                <div class="param-in">
+                    <div class="p-l" style="font-size: 0.8em; color: #666;">参数</div>
+                    <div class="param-item">
+                        <p>主货号</p>
+                        <p>WDSM-923</p>
+                    </div>
+                    <div class="param-item">
+                        <p>发售价格</p>
+                        <p>￥399</p>
+                    </div>
+                    <div class="param-item">
+                        <p>发售日期</p>
+                        <p>2024.03</p>
+                    </div>
+                </div>
+                <div class="judge">
+                    <h4>对比</h4>
+                    <i class="iconfont icon-forward"></i>
+                </div>
+            </div>
         </div>
         <div class="info-ubuy">
+            <div class="ubuy-header">
 
-        </div>
-        <div class="kaixiang">
-
-        </div>
-        <div class="discuss">
-
-        </div>
-        <div class="label">
-
-        </div>
-        <div class="recommend">
-
+            </div>
         </div>
         <div class="comment"></div>
         <div class="footer">
@@ -97,8 +115,8 @@ onMounted(async () => {
     await getInfo()
     await Sleep(10)
 })
-const Sleep = (ms:any)=>{
-    return new Promise(resolve=>setTimeout(resolve, ms))
+const Sleep = (ms: any) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
 }
 let minfo = ref({} as any)
 const getInfo = async () => {
@@ -111,7 +129,7 @@ const getInfo = async () => {
 const back = () => {
     router.back()
 }
-let rname = ['Home','Tean','Yun','Opn','Tc']
+let rname = ['Home', 'Tean', 'Yun', 'Opn', 'Tc']
 </script>
 
 <style scoped>
@@ -194,7 +212,7 @@ header {
     padding: 0 1em;
 }
 
-.info-header{
+.info-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,25 +222,25 @@ header {
     padding: 0 0.5em;
 }
 
-.info-header-right{
+.info-header-right {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.cost{
+.cost {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.recentbuy-sprite{
+.recentbuy-sprite {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.info-desc{
+.info-desc {
     display: flex;
     width: 100%;
     background-color: white;
@@ -230,12 +248,35 @@ header {
     padding: 0 0.5em;
 }
 
-.rating{
+.rating {
     width: 100%;
     background-color: white;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     padding: 0.5em 0.5em;
+}
+
+.info-adv {
+    height: 100%;
+    width: 100%;
+}
+
+.service {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.param-in {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.param {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 </style>

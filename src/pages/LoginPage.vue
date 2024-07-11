@@ -56,9 +56,7 @@ const goback = ()=>{
 
 const login = ()=>{
     accountStore.isLogined=1
-    router.push({
-        name:'user'
-    })
+    router.back()
 }
 </script>
 

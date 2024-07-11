@@ -1,23 +1,23 @@
 <template>
     <div class="footer">
         <div class="menu-item" @click="changeToHomePage">
-            <img src="../assets/icons/footer/homeicon.png" alt="" v-if="m1==0" style="width: 3em;">
-            <img src="../assets/icons/footer/homeicon-slash.png" alt="" v-if="m1==1" style="width: 3em;">
+            <img :src="homeicon" alt="" v-if="other.h1==0" style="width: 3em;">
+            <img :src="homeiconslash" alt="" v-else style="width: 3em;">
             得物
         </div>
         <div class="menu-item" @click="changeToPurchasePage">
-            <img src="../assets/icons/footer/purchaseicon.png" alt="" v-if="m2==0" style="width: 3em;">
-            <img src="../assets/icons/footer/purchaseicon-slash.png" alt="" v-if="m2==1" style="width: 3em;">    
+            <img :src="purchaseicon" alt="" v-if="other.h2==0" style="width: 3em;">
+            <img :src="purchaseiconslash" alt="" v-else style="width: 3em;">
             购买
         </div>
         <div class="menu-item" @click="changeToExplorePage">
-            <img src="../assets/icons/footer/purchaseicon.png" alt="" v-if="m3==0" style="width: 3em;">
-            <img src="../assets/icons/footer/purchaseicon-slash.png" alt="" v-if="m3==1" style="width: 3em;">    
+            <img :src="exploreicon" alt="" v-if="other.h3==0" style="width: 3em;">
+            <img :src="exploreiconslash" alt="" v-else style="width: 3em;">
             探索
         </div>
         <div class="menu-item" @click="changeToUserPage">
-            <img src="../assets/icons/footer/usericon.png" alt="" v-if="m4==0" style="width: 3em;">
-            <img src="../assets/icons/footer/usericon-slash.png" alt="" v-if="m4==1" style="width: 3em;">    
+            <img :src="usericon" alt="" v-if="other.h4==0" style="width: 3em;">
+            <img :src="usericonslash" alt="" v-else style="width: 3em;">
             我
         </div>
     </div>
@@ -27,14 +27,20 @@
 import { useAccountStore } from '@/store/account';
 import { useRouter } from 'vue-router';
 let router = useRouter()
-let m1 = 1
-let m2 = 0
-let m3 = 0
-let m4 = 0
 let accountStore = useAccountStore()
+let other = useOtherStore()
+import homeicon from '@/assets/icons/footer/homeicon.png' 
+import homeiconslash from '@/assets/icons/footer/homeicon-slash.png' 
+import usericon from '@/assets/icons/footer/usericon.png'
+import usericonslash from '@/assets/icons/footer/usericon-slash.png'
+import exploreicon from '@/assets/icons/footer/exploreicon.png'
+import exploreiconslash from '@/assets/icons/footer/exploreicon-slash.png'
+import purchaseicon from '@/assets/icons/footer/purchaseicon.png'
+import purchaseiconslash from '@/assets/icons/footer/purchaseicon-slash.png'
+import { useOtherStore } from '@/store/others';
 const changeToHomePage = () => {
-    m1 = 1
-    m2 = m3 = m4 = 0;
+    other.h1=1
+    other.h2=other.h3=other.h4=0
     if(accountStore.isLogined==0){
         router.push({
             name:'login'
@@ -46,22 +52,22 @@ const changeToHomePage = () => {
     }
 }
 const changeToPurchasePage = () => {
-    m2 = 1
-    m1 = m3 = m4 = 0;
+    other.h2=1
+    other.h1=other.h3=other.h4=0
     router.push({
         name: 'purchase'
     })
 }
 const changeToExplorePage = () => {
-    m3=1
-    m1 = m2 = m4 = 0;
+    other.h3=1
+    other.h1=other.h2=other.h4=0
     router.push({
         name: 'explore'
     })
 }
 const changeToUserPage = () => {
-    m4=1
-    m1 = m2 = m3 = 0;
+    other.h4=1
+    other.h1=other.h2=other.h3=0
     router.push({
         name: 'user'
     })
