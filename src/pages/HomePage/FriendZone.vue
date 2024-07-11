@@ -22,17 +22,40 @@
                 <FriendRecommendItem v-for="(item, i) in userInfo" :key="i" :name="item.name" :sprite="item.url" class="FRI"></FriendRecommendItem>
             </div>
         </div>
+        <div class="friendzone">
+            <FriendzoneItem v-for="(item,i) in FZIlist" :key="i" :username="item.username" :topic="item.topic" :title="item.title" :usersprite="item.usersprite"/>
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import FriendRecommendItem from '@/components/HomePage/FriendRecommendItem.vue';
+import FriendzoneItem from '@/components/HomePage/FriendzoneItem.vue';
 import { useAccountStore } from '@/store/account';
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
 let accountStore = useAccountStore()
 let userInfo = ref()
+let FZIlist = [
+    {
+        username:'COOGI_OFFICIAL箱包',
+        title:'NYC',
+        topic:'大学生最爱的棒球帽',
+        usersprite:'https://img.picui.cn/free/2024/07/11/668f565010c89.png',
+        pic:[
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+        ]
+    }
+]
 onMounted(() => {
     getUserInfo()
 })
