@@ -19,12 +19,12 @@
             </div>
             <div class="header-bottom" id="bottom">
                 <div class="header-mid">
-                    <SearchComp />
+                    <SearchComp class="search" type=2></SearchComp>
                 </div>
                 <NavTab :link="link" :category="tabname" style="height: 2em;"></NavTab>
             </div>
         </header>
-        <div class="main-content">
+        <div class="main-content" id="mainc">
             <router-view></router-view>
         </div>
     </div>
@@ -47,20 +47,23 @@ let link = [
     '',
     ''
 ]
-// document.onscroll = function () {
-//     let s1 = document.documentElement.scrollTop;
-//     let s2 = document.body.scrollTop;
-//     let scroll = s1 == 0 ? s2 : s1;
-//     let width = document.documentElement.clientWidth;
-//     let bottom: any = document.getElementById('bottom');
-//     if (scroll > width * 0.12) {
-//         bottom.style.position = 'fixed';
-//         bottom.style.top = '0';
-//         bottom.style.left = '0';
-//     } else {
-//         bottom.style.position = 'static';
-//     }
-// }
+document.onscroll = function () {
+    let s1 = document.documentElement.scrollTop;
+    let s2 = document.body.scrollTop;
+    let scroll = s1 == 0 ? s2 : s1;
+    let width = document.documentElement.clientWidth;
+    let bottom: any = document.getElementById('bottom');
+    let mainc:any = document.getElementById('mainc')
+    if (scroll > width * 0.12) {
+        bottom.style.position = 'fixed';
+        bottom.style.top = '0';
+        bottom.style.left = '0';
+        mainc.style.marginTop='4em';
+    } else {
+        bottom.style.position = 'static';
+        mainc.style.marginTop='0';
+    }
+}
 </script>
 
 <style scoped>

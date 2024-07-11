@@ -12,6 +12,7 @@
         <div class="cosmos">
             <img :src="minfo.picurl" alt="" style="height: 100%;width: 100%;">
         </div>
+        <div class="separator" style="height: 1em;width: 100%;"></div>
         <div class="info-pane">
             <div class="info-pane-inner">
                 <div class="info-header">
@@ -39,42 +40,104 @@
                 </div>
             </div>
         </div>
+        <div class="separator" style="height: 1em;width: 100%;"></div>
         <div class="info-adv">
             <div class="banner">
-
+                <div class="banner-in">
+                    <i class="iconfont icon-dewu" style="font-size:1.4em;padding-right: 0.3em;"></i>
+                    <p style="font-size: 0.8em; color: #666; width: 100%;">品牌官方专供，每件都能为你追本溯源</p>
+                    <i class="iconfont icon-forward" style="color: #666;"></i>
+                </div>
             </div>
             <div class="service">
-                <p style="font-size: 0.8em; color: #666;">服务</p>
-                <span>正品保障险·7天无理由退货·晚到必赔</span>
+                <div class="service-in">
+                    <p style="font-size: 0.8em; color: #666; padding-left: 1em;width: 4em; background-color: white">服务
+                    </p>
+                    <span
+                        style="font-size: 0.8em; color: #666; width: 100%;  background-color: white">正品保障险·7天无理由退货·晚到必赔</span>
+                    <i class="iconfont icon-forward" style="color: #666;"></i>
+                </div>
             </div>
             <div class="param">
                 <div class="param-in">
-                    <div class="p-l" style="font-size: 0.8em; color: #666;">参数</div>
-                    <div class="param-item">
-                        <p>主货号</p>
-                        <p>WDSM-923</p>
-                    </div>
-                    <div class="param-item">
-                        <p>发售价格</p>
-                        <p>￥399</p>
-                    </div>
-                    <div class="param-item">
-                        <p>发售日期</p>
-                        <p>2024.03</p>
+                    <div class="p-l" style="font-size: 0.8em; color: #666; width: 4em;padding-left: 1em;">参数</div>
+                    <div class="param-list">
+                        <div class="param-item">
+                            <p>主货号</p>
+                            <p>WDSM-923</p>
+                        </div>
+                        <div class="param-item">
+                            <p>发售价格</p>
+                            <p>￥399</p>
+                        </div>
+                        <div class="param-item">
+                            <p>发售日期</p>
+                            <p>2024.03</p>
+                        </div>
                     </div>
                 </div>
                 <div class="judge">
-                    <h4>对比</h4>
-                    <i class="iconfont icon-forward"></i>
+                    <h4 style="color: #666; font-size: 0.9em;">对比</h4>
+                    <i class="iconfont icon-forward" style="color: #666;"></i>
                 </div>
             </div>
         </div>
+        <div class="separator" style="height: 1em;width: 100%;"></div>
         <div class="info-ubuy">
-            <div class="ubuy-header">
-
+            <div class="ubuy-in">
+                <div class="ubuy-header">
+                    <div style="width: 100%;">
+                        <h4 style="width: 10em;">最近购买（2000+）</h4>
+                    </div>
+                    <div class="u-h-r">
+                        <p style="width: 2em; font-size: 0.8em;color: #666; ">全部</p>
+                        <i class="iconfont icon-forward" style="color: #666;"></i>
+                    </div>
+                </div>
+                <div class="ubuy-bottom">
+                    <div class="ubuy-item">
+                        <div class="uinfo">
+                            <div class="uinfo-item">
+                                <div class="usprite">
+                                    <img src="https://img.picui.cn/free/2024/07/10/668e304562679.jpeg" alt=""
+                                        style="width: 1.1em;border-radius: 10em;">
+                                </div>
+                                <div class="uname" style="font-size: 0.8em;">沸*</div>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">黑色 2XL</p>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">￥59</p>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">3小时前</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ubuy-item">
+                        <div class="uinfo">
+                            <div class="uinfo-item">
+                                <div class="usprite">
+                                    <img src="https://img.picui.cn/free/2024/07/10/668e304584679.jpg" alt=""
+                                        style="width: 1em;border-radius: 10em;">
+                                </div>
+                                <div class="uname" style="font-size: 0.8em;">虫*</div>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">黑色 XL</p>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">￥59</p>
+                            </div>
+                            <div class="uinfo-item">
+                                <p style="color: #666; font-size: 0.8em;">4小时前</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="comment"></div>
         <div class="footer">
             <div class="footer-left">
                 <div class="iconpanel">
@@ -96,6 +159,7 @@
             </div>
         </div>
     </div>
+    <div class="separator" style="height: 4em;width: 100%;"></div>
 </template>
 
 <script lang="ts" setup>
@@ -112,8 +176,8 @@ let other = useOtherStore()
 onMounted(async () => {
     console.log(route.query)
     other.rnamecnt++
-    await getInfo()
     await Sleep(10)
+    await getInfo()
 })
 const Sleep = (ms: any) => {
     return new Promise(resolve => setTimeout(resolve, ms))
@@ -258,19 +322,27 @@ header {
 }
 
 .info-adv {
-    height: 100%;
     width: 100%;
+    border-radius: 3px;
 }
 
 .service {
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+
+.service-in {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    padding: 1em 0;
+    background-color: white;
+    border-bottom: 1px solid #666;
 }
 
 .param-in {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -278,5 +350,105 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 1em 1em;
+}
+
+.param-item {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.param-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.judge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1em;
+    width: 100%;
+}
+
+.banner-in {
+    background: linear-gradient(to left, white, #dbf9fb, #dbf9fb, white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em 0.5em;
+    padding-right: 0;
+}
+
+.info-ubuy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+
+.ubuy-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.ubuy-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em 0.5em;
+}
+
+.u-h-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubuy-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.uinfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.uinfo-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubuy-bottom{
+    padding-bottom: 1em;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <header>
-            <SearchComp class="search"></SearchComp>
+            <SearchComp class="search" type=1></SearchComp>
         </header>
         <div class="main-content">
             <NavTab :link="link" :category="tabname"></NavTab>

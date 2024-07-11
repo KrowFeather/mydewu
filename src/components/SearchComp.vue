@@ -1,14 +1,14 @@
 <template>
     <div class="search-body">
         <div class="left-icon">
-            <img src="../assets/icons/search.svg" alt="">
+            <i class="iconfont icon-search" style="color: #666;font-size: 0.8em;"></i>
         </div>
         <div class="innerblock">
             <div class="rec-text">
                 真维斯长裤
             </div>
             <div class="qr-scan">
-                <img src="../assets/icons/scan.svg" alt="">
+                <i class="iconfont icon-scan" style="color: #666;font-size: 0.9em;"></i>
             </div>
         </div>
         <div class="btn-search">

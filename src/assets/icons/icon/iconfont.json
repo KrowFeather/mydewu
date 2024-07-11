@@ -13,6 +13,13 @@
       "unicode_decimal": 983407
     },
     {
+      "icon_id": "365293",
+      "name": "0016-camera",
+      "font_class": "0016camera",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "974125",
       "name": "star",
       "font_class": "star",
@@ -25,6 +32,13 @@
       "font_class": "heart",
       "unicode": "e639",
       "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "1462917",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
     },
     {
       "icon_id": "1567467",
@@ -62,6 +76,13 @@
       "unicode_decimal": 59176
     },
     {
+      "icon_id": "7241437",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
       "icon_id": "8430216",
       "name": "wechat",
       "font_class": "wechat-",
@@ -88,6 +109,27 @@
       "font_class": "close",
       "unicode": "e502",
       "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "15218258",
+      "name": "scan",
+      "font_class": "scan",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "21207470",
+      "name": "得物",
+      "font_class": "dewu",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "32804625",
+      "name": "scan",
+      "font_class": "scan1",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
     },
     {
       "icon_id": "39492448",
