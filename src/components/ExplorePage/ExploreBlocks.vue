@@ -14,7 +14,7 @@
                     <slot></slot>
                 </div>
                 <div class="rarr">
-                    <img src="../assets/icons/right-arrow.svg" alt="">
+                    <i class="iconfont icon-forward"></i>
                 </div>
             </div>
         </div>

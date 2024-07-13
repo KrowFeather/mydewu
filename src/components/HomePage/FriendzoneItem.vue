@@ -100,7 +100,7 @@
 </template>
 
 <script lang="ts" setup>
-defineProps(['usersprite', 'username', 'time', 'title', 'topic', 'pics', 'rgpic', 'rgtitle', 'mysprite'])
+defineProps(['usersprite', 'username', 'title', 'topic', 'pics', 'rgpic', 'rgtitle', 'mysprite'])
 </script>
 
 <style scoped>

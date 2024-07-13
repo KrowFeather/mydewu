@@ -18,7 +18,7 @@
         </el-form>
         <div class="lower-cb">
             <div class="other-ways">
-                <p>其他方式登录</p>
+                <p style="margin-bottom:1em;">其他方式登录</p>
                 <div class="other-ways-list">
                     <div class="other-ways-item">
                         <img src="../assets/icons/login/wechat.svg" alt="">

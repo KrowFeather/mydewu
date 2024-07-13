@@ -11,8 +11,11 @@
         <div class="header-mid">
             <div class="header-mid-left">
                 <div class="user-sprite">
-                    <img src="../assets/icons/euerror.png" alt="" v-if="accountStore.isLogined==0" style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;">
-                    <img :src="userinfo.sprite" alt="" style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;" v-if="accountStore.isLogined==1">
+                    <img src="../assets/icons/euerror.png" alt="" v-if="accountStore.isLogined == 0"
+                        style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;">
+                    <img :src="userinfo.sprite" alt=""
+                        style="width: 100%;height: 100%; border-radius: 10em; background-color: #666;"
+                        v-if="accountStore.isLogined == 1">
                 </div>
             </div>
             <div class="header-mid-right">
@@ -184,7 +187,7 @@ const getUserInfo = async () => {
     await axios.get(accountStore.host + '/getUserInfo/' + accountStore.userid).then((resp) => {
         userinfo.value = resp.data
         userinfo.value = userinfo.value[0]
-        accountStore.sprite=userinfo.value.sprite
+        accountStore.sprite = userinfo.value.sprite
         console.log(userinfo.value)
     })
 }
@@ -378,7 +381,7 @@ const changeToLoginPage = () => {
     margin: 0 0.3em;
 }
 
-.request{
+.request {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,7 +391,7 @@ const changeToLoginPage = () => {
     border-radius: 3px;
 }
 
-.request-item{
+.request-item {
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -399,11 +402,11 @@ const changeToLoginPage = () => {
     height: 100%;
 }
 
-.request-item h4{
+.request-item h4 {
     font-size: 0.6em
 }
 
-.request-item p{
+.request-item p {
     color: #666;
     font-size: 0.5em;
 }

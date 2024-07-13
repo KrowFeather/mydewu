@@ -8,7 +8,6 @@
                 <i class="iconfont icon-close" style="color: #666;"></i>
             </div>
             <div class="u-name">{{ name }}</div>
-            <div class="u-desc">{{ desc }}</div>
         </div>
         <div class="bottom">
             <el-button class="btn" size="small">

@@ -435,20 +435,20 @@ header {
     width: 100%;
 }
 
-.uinfo{
+.uinfo {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100vw;
 }
 
-.uinfo-item{
+.uinfo-item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ubuy-bottom{
+.ubuy-bottom {
     padding-bottom: 1em;
 }
 </style>
